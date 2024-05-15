@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #ff7613;
+  --text-color: #727171;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: lavender;
+  color: white;
+}
+
+img {
+  width: 200%;
+  border-radius: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: grey;
+}
+
+.title {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.profile_title {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.item_title {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+.item_subtitle {
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  padding: 100px;
+  background: black;
+  grid-template-columns: 3fr 2fr;
+  gap: 64px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 3fr;
+    padding: 40px;
+    gap: 140px;
+    background: red;
+  }
+}
+
+.profile {
+  grid-column: 1 / -1;
+  margin-bottom: 40px;
+}
+
+.group-1,
+.group-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile {
+    margin-bottom: 0;
+  }
+}
+
+.profile_container {
+  display: flex;
+  gap: 20px;
+}
+
+.profile_profileImg {
+  max-width: 700px;
+}
+
+.profile_name {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.profile_title {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile_container {
+    flex-direction: column;
+  }
+}
+
+.skills_list {
+  margin-top: 16px;
+  margin-left: 32px;
+  line-height: 2;
+}
+
+.awards_item {
+  margin-top: 25px;
+}
+
+.interest_items {
+  margin-top: 16px;
+  display: flex;
+  align-items: left;
+  gap: 16px;
+}
+table{
+width:70%;
+border-collapse: collapse;
+}
+table th,td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+
+
+.socialmedia {
+  font-size: 20px;
+  color: grey;
+  align-items: center;
+}
+
+.socialmedia:active {
+  color: red;
+}
+
+hr {
+  border: none;
+}

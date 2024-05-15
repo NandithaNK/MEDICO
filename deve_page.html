@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Define character encoding and viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set the title of the webpage -->
+  <title>Medico uid</title>
+  <!-- Import the Roboto font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <!-- Import Bootstrap CSS from a CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- Internal CSS styles -->
+  <style>
+    /* Flexbox layout for row and column elements */
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* Circular clipping path for images */
+    .bd-placeholder-img {
+      border-radius: 50%;
+      clip-path: circle(70px);
+    }
+   
+  </style>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-success sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MEDICO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="index.html">HOME</a>
+          <a class="nav-link" href="explore.html">EXPLORE</a>
+          <a class="nav-link" href="login.html">SIGN IN</a>
+          <a class="nav-link active" href="deve_page.html">DEVELOPERS</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Main content container -->
+  <div class="container">
+    <br><br>
+    <!-- Heading -->
+    <p>
+      <h1 align="center">Meet the Founders!</h1>
+    </p>
+    <br><br>
+    <!-- Row containing founder details -->
+    <div class="row bg-success rounded mx-auto" align="center"><!-- used to create green container and center the elements inside it-->
+      <div class="pt-5"></div><!--"adds 5 units of padding to the top of the div element-->
+      <!-- Column 1 -->
+      <div class="col-lg-4"><!--create a column within a Bootstrap grid layout-->
+        <!-- Founder image -->
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="akshaya/akshaya_img.jpg"
+          alt="Akshaya Krishnan" />
+        <!-- Founder name -->
+        <h2 class="fw-normal text-white">Akshaya Krishnan</h2><!-- sets the font weight to normal and  sets the text color to white-->
+        <!-- Founder's roll number -->
+        <p class="text-white">Roll No: AM.EN.U4AIE22108</p>
+        <!-- Link to view founder details -->
+        <p><a class="btn btn-light" href="akshaya/akshaya_res.html">View details »</a></p><!--style the link to look like a button with a light background-->
+      </div>
+      <!-- Column 2 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="gayathri/gayathri_img.jpg"
+          alt="Gayathri Krishna G" />
+        <h2 class="fw-normal text-white">Gayathri Krishna G</h2>
+        <p class="text-white">Roll No: AM.EN.U4AIE22118</p>
+        <p><a class="btn btn-light" href="gayathri/gayathri_res.html">View details »</a></p>
+      </div>
+      <!-- Column 3 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="nanditha/nanditha_img.jpg"
+          alt="Nanditha N" />
+        <h2 class="fw-normal text-white">Nanditha Nandakumar</h2>
+        <p class="text-white">Roll No: AM.EN.U4AIE22137</p>
+        <p><a class="btn btn-light" href="nanditha/RESUME.html">View details »</a></p>
+      </div>
+      <!-- Column 4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="pooja/pooja_img.jpg"
+          alt="Pooja S Pillai" />
+        <h2 class="fw-normal text-white">Pooja S Pillai</h2>
+        <p class="text-white">Roll No: AM.EN.U4AIE22140</p>
+        <p><a class="btn btn-light" href="pooja/pooja_res.html">View details »</a></p>
+      </div>
+      <!-- using iframe display thank you -->
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- responsive iframe using bootstrap(embeded-responsive) -->
+          <!-- ratio 1x1 shows that full image is displayed -->
+          <div class="embed-responsive embed-responsive-1by1 mt-4 ratio ratio-1x1">
+            <iframe class="embed-responsive-item rounded" src="/assets/thku.gif"></iframe>
+          </div>
+        </div>
+        <!-- table with contact details -->
+        <div class="col-lg-12 mt-4">
+          <div class="table-responsive">
+            <table class="table table-bordered bg-success text-white">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Contact</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Akshaya</td>
+                  <td>akshayakrish12@gmail.com</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Gayathri </td>
+                  <td>gayathri455@gmail.com</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Nanditha</td>
+                  <td>nanditha899@gmail.com</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Pooja</td>
+                  <td>pooja799@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+      
+        </tbody>
+    </div>
+    
+  </div>
+  
+  
+  <!-- Footer section -->
+  <footer class="bg-success text-white mt-2 ">
+    <div>
+      <strong>
+        <br>
+        <p align="center"> Brought to you by:</p>
+        <p align="center">Akshaya Krishnan &emsp;&emsp;&emsp; Gayathri Krishna &emsp;&emsp;&emsp; Nanditha Nandakumar
+          &emsp;&emsp;&emsp; Pooja S Pillai <br><br> © 2023–2023 Medico, Inc. &emsp; &emsp; <a href="#"
+            class="text-white">Back to top</a>
+        </p>
+        <br>
+      </strong>
+    </div>
+  </footer>
+</body>
+
+</html>

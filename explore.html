@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medico uid</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- linking the fontawesome to include searchbar icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.css">
+
+  <style>
+    /* for the modal popup upon read more */
+    .modal-backdrop {
+      background-color: rgb(34, 65, 34);
+    }
+
+    .modal-header {
+      background: #559b6c;
+      color: white;
+    }
+
+
+    .custom-card {
+      margin: 10px;
+    }
+
+    .card:hover {
+      /* transform: scale(0.5); */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+      
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- to import bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+    <!-- to import searchbar js -->
+  <script src="searchbar.js"></script>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-success sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MEDICO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="index.html">HOME</a>
+          <a class="nav-link active" href="explore.html">EXPLORE</a>
+          <a class="nav-link" href="login.html">SIGN IN</a>
+          <a class="nav-link" href="deve_page.html">DEVELOPERS</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!-- for search bar -->
+  <div class="container mt-4">
+    <form class="d-flex sticky-top">
+      <!-- for taking input ,in a form -->
+      <input class="form-control me-1" id="cardsearch" type="text" placeholder="Search" aria-label="searchcard"
+        onkeyup="searchcard()">
+        <!-- search button with magnifying glass icon -->
+      <button class="btn btn-success" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <!-- for cards -->
+    <div class="row" id="allcards">
+      
+      <div class="col-md-4">
+        <!-- making custom card in bootstrap -->
+        <div class="card custom-card" style="width: 100%">
+          <!-- card header -->
+          <img class="card-img-top" src="assets/snakebite.jpeg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <!-- card body div -->
+            <h5 class="card-title">Snake bites</h5>
+            <!-- read more button with target as id which points to the specific modal box-->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#snakeexp">Read
+              more</button>
+              <!-- modal specifications, if content exeeds a certain length , it scrolls -->
+            <div class="modal fade" id="snakeexp" tabindex="-1" aria-labelledby="exsnake" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+<!-- contents of the modal box -->
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exsnake">First aid for snakebites</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/snakebite.jpeg" style="border-radius: 10px;" />
+
+                    <p>If you suspect a snake bite:</p>
+                    <ul>
+                      <li>Immediately move away from the area where the bite occurred.</li>
+                      <li>If the snake is still attached use a stick or tool to make it let go. </li>
+                      <li>Sea snake victims need to be moved to dry land to avoid drowning.</li>
+                      <li>Remove anything tight from around the bitten part of the body (e.g.: rings, anklets,
+                        bracelets)
+                        as these can cause harm if swelling occurs.</li>
+                      <li>Reassure the victim. Many snake bites are caused by non-venomous snakes. And even after most
+                        venomous snake bites the risk of death is not immediate.</li>
+                      <li>Immobilize the person completely. Splint the limb to keep it still. Use a makeshift stretcher
+                        to
+                        carry the person to a place where transport is available to take them to a health facility.</li>
+                      <li>Never use a tight arterial tourniquet.</li>
+                      <li>The Australian Pressure Immobilization Bandage (PIB) Method is only recommended for bites by
+                        neurotoxic snakes that do not cause local swelling.</li>
+                      <li>Applying pressure at the bite site with a pressure pad may be suitable in some cases.</li>
+                      <li>Avoid traditional first aid methods, herbal medicines and other unproven or unsafe forms of
+                        first aid.</li>
+                      <li>Transport the person to a health facility as soon as possible</li>
+                      <li>Paracetamol may be given for local pain (which can be severe).</li>
+                      <li>Vomiting may occur, so place the person on their left side in the recovery position.</li>
+                      <li>Closely monitor airway and breathing and be ready to resuscitate if necessary.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- the cards are repeated -->
+<!-- col-ms-4 determines the size of the card -->
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/arm burn.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Burns</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#burnexp">Read
+              more</button>
+              <!-- modal-fade so that it doesn't pop up immediately and fades in  -->
+            <div class="modal fade" id="burnexp" tabindex="-1" aria-labelledby="exburn" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exsnake">First aid for Burns</h1>
+<!-- close button , you can also close by clicking random place outside modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/arm burn.jpg" style="border-radius: 10px;" />
+
+                    <p>For minor burns</p>
+                    <ul>
+                      <li>Cool the burn. Hold the area under cool (not cold) running water for about 10 minutes. If the
+                        burn is on the face, apply a cool, wet cloth until the pain eases. For a mouth burn from hot
+                        food
+                        or drink, put a piece of ice in the mouth for a few minutes.</li>
+                      <li>Remove rings or other tight items from the burned area. Try to do this quickly and gently,
+                        before the area swells.</li>
+                      <li>Don't break blisters. Blisters help protect against infection. If a blister does break, gently
+                        clean the area with water and apply an antibiotic ointment.</li>
+                      <li>Apply lotion. After the burn is cooled, apply a lotion, such as one with aloe vera or cocoa
+                        butter. This helps prevent drying and provides relief.</li>
+                      <li>Bandage the burn. Cover the burn with a clean bandage. Wrap it loosely to avoid putting
+                        pressure
+                        on burned skin. Bandaging keeps air off the area, reduces pain and protects blistered skin.</li>
+                      <li>If needed, take a nonprescription pain reliever, such as ibuprofen (Advil, Motrin IB, others),
+                        naproxen sodium (Aleve) or acetaminophen (Tylenol, others).
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/beesting.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Bee stings</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#beeexp">Read
+              more</button>
+            <div class="modal fade" id="beeexp" tabindex="-1" aria-labelledby="exbee" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exbee">First aid for Bee stings</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/bee sting.jpg" style="border-radius: 10px;" />
+
+                    <p>First aid for bee stings:</p>
+                    <p>Bee stings can cause different reactions, from mild temporary pain and discomfort to significant
+                      swelling and a severe allergic reaction.</p>
+                    <ul>
+                      <li>Remove the sting by sliding or scraping your fingernail across it, rather than pulling at it.
+                      </li>
+                      <li>Wash the area and apply a cold pack to reduce the swelling.</li>
+                      <li>If there is significant pain and swelling, over-the-counter pain medication (such as
+                        paracetamol) or an antihistamine may give some relief.
+                      </li>
+                      <li>If the person has an allergy to bee stings, they can experience anaphylaxis. If this occurs,
+                        they will need an injection of adrenaline (EpiPen®).</li>
+                    </ul>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/heartattack.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Heartaches</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#heartexp">Read
+              more</button>
+            <div class="modal fade" id="heartexp" tabindex="-1" aria-labelledby="exheart" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exheart">First aid for Heartaches</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/heartattack.jpg" style="border-radius: 10px;" />
+
+                    <p>If you or someone else may be having a heart attack, follow these first-aid steps:</p>
+                    <ul>
+                      <li>Call 911 or emergency medical assistance. Don't ignore the symptoms of a heart attack. If you
+                        can't get an ambulance or emergency vehicle to come to you, have a neighbor or a friend drive
+                        you
+                        to the nearest hospital. Drive yourself only if you have no other option. Because your condition
+                        can worsen, driving yourself puts you and others at risk.</li>
+                      <li>Chew aspirin.Aspirin is a blood thinner. It prevents clotting and keeps blood flowing through
+                        a
+                        narrowed artery that's caused a heart attack. Don't take aspirin if you have chest pain due to
+                        an
+                        injury. Also, don't take aspirin if you are allergic to aspirin, have bleeding problems or take
+                        another blood-thinning medication, or if your health care provider previously told you not to do
+                        so.</li>
+                      <li>Take nitroglycerin, if prescribed. If you think you're having a heart attack and your health
+                        care provider has previously prescribed nitroglycerin for you, take it as directed. Don't take
+                        anyone else's nitroglycerin.</li>
+                      <li>Begin CPR on the person having a heart attack. The American Heart Association recommends
+                        starting hands-only CPR. Push hard and fast on the person's chest for 100 to 120 compressions a
+                        minute.</li>
+                      <li>If an automated external defibrillator (AED) is immediately available and the person is
+                        unconscious, follow the device instructions for using it.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/insect bites.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Insect bites</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#insectexp">Read
+              more</button>
+            <div class="modal fade" id="insectexp" tabindex="-1" aria-labelledby="exinsect" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exinsect">First aid for Insect bites</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/insect bites.jpg" style="border-radius: 10px;" />
+
+                    <p>Most insect bites and stings are mild and can be treated at home. They might cause itching,
+                      swelling and stinging that go away in a day or two. Some bites or stings can transmit
+                      disease-causing bacteria, viruses or parasites. Stings from bees, yellow jackets, wasps, hornets
+                      and fire ants might cause a severe allergic reaction (anaphylaxis).</p>
+                    <p>To treat a mild reaction to an insect bite or sting:</p>
+                    <ul>
+                      <li>Move to a safe area to avoid more bites or stings.</li>
+                      <li>Remove any stingers.</li>
+                      <li>Gently wash the area with soap and water.</li>
+                      <li>Apply a cloth dampened with cold water or filled with ice to the area of the bite or sting for
+                        10 to 20 minutes. This helps reduce pain and swelling.</li>
+                      <li>If the injury is on an arm or leg, raise it.</li>
+                      <li>Apply to the affected area calamine lotion, baking soda paste, or 0.5% or 1% hydrocortisone
+                        cream. Do this several times a day until your symptoms go away.</li>
+                      <li>Take an anti-itch medicine (antihistamine) by mouth to reduce itching. Options include
+                        nonprescription cetirizine, fexofenadine (Allegra Allergy, Children's Allegra Allergy),
+                        loratadine
+                        (Claritin).</li>
+                      <li>Take a nonprescription pain reliever as needed.</li>
+                    </ul>
+                    <p>Seek medical care if the swelling gets worse, the site shows signs of infection or you don't feel
+                      well.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/choking.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Choking</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#chokeexp">Read
+              more</button>
+            <div class="modal fade" id="chokeexp" tabindex="-1" aria-labelledby="exchoke" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exchoke">First aid for Choking</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/choking.jpg" style="border-radius: 10px;" />
+
+                    <p>If a person seems to be choking:</p>
+                    <p>If a choking person can cough forcefully, let the person keep coughing.
+
+                      Coughing might naturally remove the stuck object.</p>
+                    <p>If a person can't cough, talk, cry or laugh forcefully, give first aid to the person.</p>
+                    <ul>
+                      <li>Give five back blows. Stand to the side and just behind a choking adult. For a child, kneel
+                        down
+                        behind. Place your arm across the person's chest to support the person's body. Bend the person
+                        over at the waist to face the ground. Strike five separate times between the person's shoulder
+                        blades with the heel of your hand.</li>
+                      <li>Give five abdominal thrusts. If back blows don't remove the stuck object, give five abdominal
+                        thrusts, also known as the Heimlich maneuver.</li>
+                      <li>Alternate between five blows and five thrusts until the blockage is dislodged.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/nosebleed.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Nose bleed</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#nosebleedexp">Read
+              more</button>
+            <div class="modal fade" id="nosebleedexp" tabindex="-1" aria-labelledby="exnosebleed" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exnosebleed">First aid for Nose Bleed</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/nosebleed.jpg" style="border-radius: 10px;" />
+
+                    <p>Self-care for a common nosebleed</p>
+                    <ul>
+                      <li>Sit up and lean forward. Keep the head up. Lean forward so the blood doesn't go down the
+                        throat.
+                        This could cause you to choke or have an upset stomach.</li>
+                      <li>Gently blow your nose. This will clear any blood clots.</li>
+                      <li>Pinch the nose. Use the thumb and a finger to pinch both nostrils shut. Breathe through the
+                        mouth. Keep pinching for 10 to 15 minutes. Pinching puts pressure on the blood vessels and helps
+                        stop the blood flow.
+
+                        If the bleeding doesn't stop, pinch the nose again for up to 15 minutes. Don't let go for at
+                        least
+                        five minutes even to check if the bleeding has stopped. Seek emergency care if the bleeding
+                        doesn't stop after the second try.</li>
+                      <li>Prevent another nosebleed. Don't pick or blow the nose. And don't drop the head below the
+                        heart
+                        or lift anything heavy for many hours. Gently put a saline gel (Ayr), antibiotic ointment
+                        (Neosporin) or petroleum jelly (Vaseline) on the inside of the nose. Put most of the salve on
+                        the
+                        middle part of the nose, also called the septum. Steam, humidifiers or an ice pack across the
+                        bridge of the nose also may help.</li>
+                      <li>If you have another nosebleed, try first-aid steps again. This time, spray both sides of the
+                        nose with a nasal spray that has oxymetazoline in it (Afrin). Do this after blowing the nose.
+                        Then
+                        pinch the nose again. Seek medical help if the bleeding does not stop.
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/shock.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Allergic reactions</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#shockexp">Read
+              more</button>
+            <div class="modal fade" id="shockexp" tabindex="-1" aria-labelledby="exshock" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exshock">First aid in case of Allergic Reactions</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/shock.jpg" style="border-radius: 10px;" />
+
+                    <p>If you're with someone having an allergic reaction with signs of anaphylaxis:</p>
+                    <ul>
+                      <li>Immediately call 911 or your local medical emergency number.</li>
+                      <li>Ask if the person is carrying an epinephrine autoinjector(EpiPen, Auvi-Q, others) to treat an
+                        allergic attack.</li>
+                      <li>If the person needs to use an autoinjector, ask whether you should help inject the medication.
+                        This is usually done by pressing the autoinjector against the person's thigh.</li>
+                      <li>Have the person lie face up and be still.</li>
+                      <li>Loosen tight clothing and cover the person with a blanket. Don't give the person anything to
+                        drink.</li>
+                      <li>If there's vomiting or bleeding from the mouth, turn the person to the side to prevent
+                        choking.
+                      </li>
+                      <li>If there are no signs of breathing, coughing or movement, begin CPR. Do uninterrupted chest
+                        presses — about 100 every minute — until paramedics arrive.</li>
+                      <li>Get emergency treatment even if symptoms start to improve. After anaphylaxis, it's possible
+                        for
+                        symptoms to start again (recur). Monitoring in a hospital for several hours is usually
+                        necessary.
+                      </li>
+                    </ul>
+                    <p>If you're with someone having symptoms of anaphylaxis, don't wait to see whether symptoms get
+                      better. Seek emergency treatment right away. In severe cases, untreated anaphylaxis can lead to
+                      death within half an hour.</p>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card custom-card" style="width: 100%">
+          <img class="card-img-top" src="assets/muscletear.jpg" alt="Card image cap" />
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">Muscle Strain</h5>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#muscleexp">Read
+              more</button>
+            <div class="modal fade" id="muscleexp" tabindex="-1" aria-labelledby="exmuscle" aria-hidden="true">
+              <div class="modal-dialog modal-lg  modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+
+                  <div class="modal-header ">
+                    <h1 class="modal-title " id="exmuscle">First aid for Muscle Tear</h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-sm-start bg-success.bg-gradient">
+                    <img src="assets/muscletear.jpg" style="border-radius: 10px;" />
+
+                    <p>For Muscle Tear</p>
+                    <ul>
+                      <li>Protect by applying an elastic bandage, sling, or splint.</li>
+                      <li>Rest the muscle for at least a day.</li>
+                      <li>Ice immediately, and continue to ice for 10 to 15 minutes every hour, for 2-3 days.</li>
+                      <li>Compress by gently wrapping with an Ace or other elastic bandage. (Don't wrap tightly.)</li>
+                      <li>Elevate injured area above the person's heart level, if possible, for at least 24 hours.</li>
+                    </ul>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  
+  
+</div>
+  <footer class="bg-success text-white mt-2">
+    <div>
+      <strong>
+        <br>
+        <p align="center"> Brought to you by:
+        </p>
+        <p align="center">Akshaya Krishnan &emsp;&emsp;&emsp; Gayathri Krishna &emsp;&emsp;&emsp; Nanditha Nandakumar
+          &emsp;&emsp;&emsp; Pooja S Pillai <br><br> © 2023–2023 Medico, Inc. &emsp; &emsp; <a href="#"
+            class="text-white">Back to top</a>
+        </p>
+        <br>
+      </strong>
+    </div>
+  </footer>
+</body>
+
+</html>
